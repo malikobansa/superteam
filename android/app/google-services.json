@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "289738838123",
+    "project_id": "superteam-15520",
+    "storage_bucket": "superteam-15520.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:289738838123:android:27738a783b8dd229a0212e",
+        "android_client_info": {
+          "package_name": "com.anon.social"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3RqKho04Kw9gqWmLs22TNZ-91rbwscFc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
