@@ -34,7 +34,7 @@ const Index = () => {
           Find Your Next High Paying Crypto Gig
         </Text>
         <Text style={tw` mt-10 ml-5 text-xl bg-black text-white rounded-sm p-2`}>Participate in bounties or apply to freelance gigs of world-class crypto companies, all with a single profile.</Text>
-        <TouchableOpacity style={tw`bg-white p-8 w-50 rounded-xl mt-10`} onPress={() => router.push('/auth/signup')}>
+        <TouchableOpacity style={tw`bg-white p-8 w-50 rounded-xl mt-10`} onPress={() => router.push("/auth/signup")}>
           <Text style={tw`bg-white text-2xl text-blue-500 text-center`}>Sign Up</Text>
         </TouchableOpacity>
       </View>

@@ -5,6 +5,7 @@ import tw from "twrnc";
 import { Client, Account } from "appwrite";
 import AppwriteOauth from "react-native-appwrite-oauth";
 import { useRouter } from "expo-router";
+import CookieManager from "@react-native-cookies/cookies"; // Import CookieManager
 
 // Initialize Appwrite Client
 const client = new Client();
@@ -18,9 +19,18 @@ const SignUp = () => {
   const router = useRouter();
   const [authenticating, setAuthenticating] = useState(false);
 
-  const handleSuccess = (session) => {
+  const handleSuccess = async (session) => {
     setAuthenticating(false);
     console.log("Google Sign-In Successful:", session);
+
+    // Optional: Clear cookies after successful sign-in to prevent stale sessions
+    try {
+      await CookieManager.clearAll();
+      console.log("Cookies cleared successfully");
+    } catch (error) {
+      console.error("Failed to clear cookies:", error);
+    }
+
     Alert.alert("Success", "Google Sign-In Successful!");
     router.push("/home"); // Navigate to the home screen
   };
