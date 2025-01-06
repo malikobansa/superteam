@@ -16,8 +16,7 @@
         "foregroundImage": "./assets/images/earn-logo-dark.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.malikobansa.superteam",
-      "googleServicesFile": "./google-services.json"
+      "package": "com.superteam.app"
     },
     "web": {
       "bundler": "metro",

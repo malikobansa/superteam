@@ -3,6 +3,10 @@ pluginManagement {
 }
 plugins { id("com.facebook.react.settings") }
 
+include ':@react-native-cookies_cookies'
+project(':@react-native-cookies_cookies').projectDir = new File(rootProject.projectDir, '../node_modules/@react-native-cookies/cookies/android')
+
+
 extensions.configure(com.facebook.react.ReactSettingsExtension) { ex ->
   if (System.getenv('EXPO_USE_COMMUNITY_AUTOLINKING') == '1') {
     ex.autolinkLibrariesFromCommand()

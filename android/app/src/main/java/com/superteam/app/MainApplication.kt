@@ -1,7 +1,9 @@
-package com.malikobansa.superteam
+package com.superteam.app
 
 import android.app.Application
 import android.content.res.Configuration
+import com.reactnativecommunity.cookies.CookieManagerPackage;
+
 
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
@@ -25,8 +27,17 @@ class MainApplication : Application(), ReactApplication {
             val packages = PackageList(this).packages
             // Packages that cannot be autolinked yet can be added manually here, for example:
             // packages.add(new MyReactNativePackage());
+          @Override
+            protected List<ReactPackage> getPackages() {
+              return Arrays.<ReactPackage>asList(
+                  new MainReactPackage(),
+                  new CookieManagerPackage() // Add this line
+              );
+            }
             return packages
           }
+
+
 
           override fun getJSMainModuleName(): String = ".expo/.virtual-metro-entry"
 

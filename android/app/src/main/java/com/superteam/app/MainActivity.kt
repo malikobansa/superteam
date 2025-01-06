@@ -1,4 +1,4 @@
-package com.malikobansa.superteam
+package com.superteam.app
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build
